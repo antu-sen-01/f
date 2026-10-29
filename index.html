@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL CUTS — Premium Salon & Grooming Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#121212',
+                            700: '#1a1a1a',
+                            600: '#262626'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark-900 text-gray-200 antialiased font-sans selection:bg-amber-500 selection:text-black">
+
+    <!-- Header / Sticky Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-dark-900/90 backdrop-blur-md border-b border-amber-500/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full border border-amber-500/50 flex items-center justify-center bg-dark-800 text-amber-400 group-hover:border-amber-400 transition">
+                    <i class="fa-solid font-bold fa-scissors transform -rotate-45 text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-widest text-white uppercase block font-serif">Royal Cuts</span>
+                    <span class="text-[9px] tracking-widest text-amber-500/80 uppercase block">Grooming Studio</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="nav-link text-amber-400 hover:text-amber-400 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-amber-400 transition">About</a>
+                <a href="#services" class="nav-link hover:text-amber-400 transition">Services</a>
+                <a href="#work" class="nav-link hover:text-amber-400 transition">Our Work</a>
+                <a href="#pricing" class="nav-link hover:text-amber-400 transition">Pricing</a>
+                <a href="#reviews" class="nav-link hover:text-amber-400 transition">Reviews</a>
+                <a href="#contact" class="nav-link hover:text-amber-400 transition">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="#booking" class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold text-xs uppercase tracking-wider rounded shadow-lg shadow-amber-500/10 hover:shadow-amber-500/30 hover:scale-105 transition transform">Book Appointment</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-white p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark-800 border-b border-amber-500/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 text-amber-400 font-medium">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-amber-400">About Us</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-amber-400">Services</a>
+            <a href="#work" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-amber-400">Our Work</a>
+            <a href="#pricing" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-amber-400">Pricing</a>
+            <a href="#reviews" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-amber-400">Reviews</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-amber-400">Contact</a>
+            <a href="#booking" class="mobile-nav-link block w-full text-center mt-4 px-4 py-2.5 bg-amber-500 text-black font-semibold text-xs uppercase tracking-wider rounded">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed scale-105" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1920');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-dark-900/60"></div>
+        
+        <div class="relative max-w-5xl mx-auto px-4 text-center z-10 py-20">
+            <div class="inline-flex items-center space-x-2 border border-amber-500/40 bg-black/50 px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm animate-fade-in">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-semibold">Precision • Style • Confidence</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-wide mb-6 leading-tight">
+                YOUR STYLE.<br><span class="text-gradient">YOUR STATEMENT.</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Experience world-class hair styling, beard grooming, and facial therapies customized to elevate your modern look.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-amber-500 text-black font-bold text-sm uppercase tracking-wider rounded hover:bg-amber-400 transition transform hover:-translate-y-0.5 shadow-lg shadow-amber-500/20">
+                    Explore Services
+                </a>
+                <a href="#booking" class="w-full sm:w-auto px-8 py-4 border border-amber-500/60 text-amber-400 font-bold text-sm uppercase tracking-wider rounded hover:bg-amber-500/10 transition transform hover:-translate-y-0.5">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+
+        <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-400/70 hover:text-amber-400 transition animate-bounce">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="relative">
+                    <div class="relative z-10 rounded-lg overflow-hidden border border-amber-500/30 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1000" alt="Royal Cuts Salon Interior" class="w-full h-[480px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-2/3 h-2/3 border-2 border-amber-500/30 rounded-lg -z-0 hidden sm:block"></div>
+                    <div class="absolute -top-6 -left-6 bg-dark-800 border border-amber-500/30 p-6 rounded-lg z-20 shadow-xl hidden sm:block">
+                        <span class="text-3xl font-serif font-bold text-amber-400 block">10+</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider">Years Experience</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-px bg-amber-400"></span>
+                        <span>Welcome to Royal Cuts</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-6 leading-tight">
+                        MORE THAN JUST A HAIRCUT
+                    </h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed font-light">
+                        At Royal Cuts Grooming Studio, we combine timeless traditional barbering craftsmanship with modern styling trends. Every cut, fade, and trim is tailored individually to match your bone structure, lifestyle, and unique sense of self.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed font-light">
+                        We prioritize hygienic practices, premium organic hair products, and an effortless ambient environment where you can unwind, refresh, and walk out with unmatched confidence.
+                    </p>
+
+                    <!-- Stats Counter Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-dark-700">
+                        <div>
+                            <span class="stat-number text-2xl font-serif font-bold text-amber-400" data-target="10">0</span><span class="text-amber-400 font-bold">+</span>
+                            <p class="text-xs text-gray-400 mt-1 uppercase">Years Experience</p>
+                        </div>
+                        <div>
+                            <span class="stat-number text-2xl font-serif font-bold text-amber-400" data-target="8">0</span>
+                            <p class="text-xs text-gray-400 mt-1 uppercase">Master Stylists</p>
+                        </div>
+                        <div>
+                            <span class="stat-number text-2xl font-serif font-bold text-amber-400" data-target="15000">0</span><span class="text-amber-400 font-bold">+</span>
+                            <p class="text-xs text-gray-400 mt-1 uppercase">Happy Clients</p>
+                        </div>
+                        <div>
+                            <span class="stat-number text-2xl font-serif font-bold text-amber-400" data-target="100">0</span><span class="text-amber-400 font-bold">%</span>
+                            <p class="text-xs text-gray-400 mt-1 uppercase">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex items-center justify-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+                    <span class="w-8 h-px bg-amber-400"></span>
+                    <span>Craftsmanship & Care</span>
+                    <span class="w-8 h-px bg-amber-400"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">OUR PREMIUM SERVICES</h2>
+                <p class="text-gray-400 font-light">Explore our curated grooming menu crafted specifically for the modern gentleman.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Item 1 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600" alt="Classic Haircut" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Classic Haircut</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳250</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Precision tailored cut finished with a clean razor line and styling.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Classic Haircut')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 2 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600" alt="Premium Haircut" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Premium Haircut</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳400</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Precision cut, relaxing hair wash, head massage & custom product styling.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Premium Haircut')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 3 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600" alt="Beard Trim" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Beard Trim</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳150</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Beard shaping, line-up with razor detail, hot towel finish & beard oil nourishment.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Beard Trim')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 4 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600" alt="Haircut + Beard Combo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Haircut + Beard Combo</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳450</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Complete signature package: Classic haircut, tailored beard trim, and hot towel wash.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Haircut + Beard Combo')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 5 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&q=80&w=600" alt="Hair Wash & Massage" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Hair Wash & Massage</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳150</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Deep scalp cleansing with premium organic shampoo & scalp massage therapy.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Hair Wash')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 6 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1512290900673-700242211936?auto=format&fit=crop&q=80&w=600" alt="Facial Treatment" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Facial Treatment</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳500</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Deep pore cleansing, exfoliation scrub, blackhead removal, and gold glow mask.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Facial Treatment')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 7 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=600" alt="Hair Color & Highlights" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Hair Color</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳800</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Ammonia-free premium hair coloring, gray coverage, or modern highlights.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('Hair Color')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+
+                <!-- Service Item 8 -->
+                <div class="group bg-dark-900 border border-dark-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="VIP Full Package" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">VIP Grooming Package</h3>
+                                <span class="text-amber-400 font-serif font-bold text-lg">৳900</span>
+                            </div>
+                            <p class="text-gray-400 text-sm font-light mb-4">Ultimate luxury treatment: Haircut, beard styling, wash, facial & hot towel massage.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectServiceAndScroll('VIP Grooming')" class="w-full py-2.5 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Book This Service</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Our Work Section -->
+    <section id="work" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="flex items-center justify-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+                    <span class="w-8 h-px bg-amber-400"></span>
+                    <span>Craftsmanship Showcase</span>
+                    <span class="w-8 h-px bg-amber-400"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">OUR WORK GALLERY</h2>
+                <p class="text-gray-400 font-light">Browse through our recent haircut transformations, beard sculpting, and studio vibe.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="filter-btn active px-5 py-2 text-xs uppercase font-semibold rounded-full border border-amber-500 text-black bg-amber-500 transition" data-filter="all">All</button>
+                <button class="filter-btn px-5 py-2 text-xs uppercase font-semibold rounded-full border border-dark-700 text-gray-300 hover:border-amber-500 transition" data-filter="haircut">Haircuts</button>
+                <button class="filter-btn px-5 py-2 text-xs uppercase font-semibold rounded-full border border-dark-700 text-gray-300 hover:border-amber-500 transition" data-filter="beard">Beard Styling</button>
+                <button class="filter-btn px-5 py-2 text-xs uppercase font-semibold rounded-full border border-dark-700 text-gray-300 hover:border-amber-500 transition" data-filter="interior">Studio Vibe</button>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item haircut relative group overflow-hidden rounded-lg cursor-pointer h-72 border border-dark-700" onclick="openLightbox('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=1200', 'Fade Haircut Precision')">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600" alt="Fade Haircut" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Haircut</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Skin Fade & Textured Top</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item beard relative group overflow-hidden rounded-lg cursor-pointer h-72 border border-dark-700" onclick="openLightbox('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=1200', 'Beard Trim Detail')">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600" alt="Beard Shaping" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Beard</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Precision Razor Line Beard Trim</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item interior relative group overflow-hidden rounded-lg cursor-pointer h-72 border border-dark-700" onclick="openLightbox('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1200', 'Studio Chair')">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=600" alt="Salon Chair" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Interior</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Luxury Grooming Station</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item haircut relative group overflow-hidden rounded-lg cursor-pointer h-72 border border-dark-700" onclick="openLightbox('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=1200', 'Modern Haircut Styling')">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600" alt="Gentleman Haircut" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Haircut</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Classic Side Part</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item beard relative group overflow-hidden rounded-lg cursor-pointer h-72 border border-dark-700" onclick="openLightbox('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1200', 'Barber At Work')">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600" alt="Stylist Working" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Craft</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Master Stylist in Action</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item interior relative group overflow-hidden rounded-lg cursor-pointer h-72 border border-dark-700" onclick="openLightbox('https://images.unsplash.com/photo-1512290900673-700242211936?auto=format&fit=crop&q=80&w=1200', 'Facial & Spa Area')">
+                    <img src="https://images.unsplash.com/photo-1512290900673-700242211936?auto=format&fit=crop&q=80&w=600" alt="Spa Area" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Interior</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Facial & Relaxation Spa Lounge</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-amber-400 text-3xl focus:outline-none z-50">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl max-h-[90vh] relative">
+            <img id="lightbox-img" src="" alt="Full view" class="max-w-full max-h-[80vh] object-contain rounded border border-dark-700">
+            <p id="lightbox-caption" class="text-center text-amber-400 font-serif text-lg mt-4"></p>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex items-center justify-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+                    <span class="w-8 h-px bg-amber-400"></span>
+                    <span>Transparent Pricing</span>
+                    <span class="w-8 h-px bg-amber-400"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">MEMBERSHIP & PACKAGES</h2>
+                <p class="text-gray-400 font-light">Select from our bundled packages for complete grooming value.</p>
+                <span class="inline-block mt-2 text-xs text-amber-500/80 italic">* Prices are fully customizable for shop owners</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="bg-dark-900 border border-dark-700 rounded-xl p-8 flex flex-col justify-between hover:border-amber-500/30 transition">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">BASIC</h3>
+                        <p class="text-gray-400 text-xs uppercase tracking-wider mb-6">Essential Monthly Grooming</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif font-bold text-amber-400">৳250</span>
+                            <span class="text-gray-400 text-sm"> / visit</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Classic Haircut</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Basic Hair Styling</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Hair & Face Consultation</li>
+                            <li class="flex items-center text-gray-600"><i class="fa-solid fa-xmark text-gray-600 mr-3"></i> Beard Trimming</li>
+                            <li class="flex items-center text-gray-600"><i class="fa-solid fa-xmark text-gray-600 mr-3"></i> Facial Treatment</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectServiceAndScroll('Classic Haircut')" class="w-full py-3 border border-amber-500/50 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Choose Basic</button>
+                </div>
+
+                <!-- Premium Package (Featured) -->
+                <div class="bg-dark-900 border-2 border-amber-500 rounded-xl p-8 flex flex-col justify-between relative transform lg:-translate-y-4 shadow-2xl shadow-amber-500/10">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-amber-600 text-black text-[10px] font-extrabold uppercase tracking-widest px-4 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">PREMIUM</h3>
+                        <p class="text-amber-400 text-xs uppercase tracking-wider mb-6">Complete Look Refinement</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif font-bold text-amber-400">৳450</span>
+                            <span class="text-gray-400 text-sm"> / visit</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Premium Haircut & Fade</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Beard Trimming & Shaping</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Custom Styling & Product</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Refreshing Hair Wash</li>
+                            <li class="flex items-center text-gray-600"><i class="fa-solid fa-xmark text-gray-600 mr-3"></i> Full Facial Treatment</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectServiceAndScroll('Haircut + Beard Combo')" class="w-full py-3 bg-amber-500 text-black font-bold text-xs uppercase tracking-wider rounded hover:bg-amber-400 transition shadow-lg shadow-amber-500/20">Choose Premium</button>
+                </div>
+
+                <!-- VIP Package -->
+                <div class="bg-dark-900 border border-dark-700 rounded-xl p-8 flex flex-col justify-between hover:border-amber-500/30 transition">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">VIP GROOMING</h3>
+                        <p class="text-gray-400 text-xs uppercase tracking-wider mb-6">Full Luxury Experience</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif font-bold text-amber-400">৳900</span>
+                            <span class="text-gray-400 text-sm"> / visit</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Signature Haircut & Styling</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Razor Line Beard Sculpting</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Organic Hair Wash & Massage</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Gold Glowing Facial Spa</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Priority Reservation</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectServiceAndScroll('VIP Grooming')" class="w-full py-3 border border-amber-500/50 text-amber-400 hover:bg-amber-500 hover:text-black font-semibold text-xs uppercase tracking-wider rounded transition">Choose VIP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section id="booking" class="py-24 bg-dark-900 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-dark-800 border border-amber-500/30 rounded-2xl p-6 sm:p-10 shadow-2xl relative">
+                <div class="text-center mb-10">
+                    <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Reserve Your Slot</span>
+                    <h2 class="text-3xl font-serif font-bold text-white mt-1">BOOK AN APPOINTMENT</h2>
+                    <p class="text-gray-400 text-sm mt-2">Fill out the form below or chat directly via WhatsApp.</p>
+                </div>
+
+                <form id="appointment-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Full Name *</label>
+                            <input type="text" id="cust-name" required placeholder="John Doe" class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Phone Number *</label>
+                            <input type="tel" id="cust-phone" required placeholder="+880 1800 000000" class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Select Service *</label>
+                            <select id="cust-service" required class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                                <option value="" disabled selected>Choose a service</option>
+                                <option value="Classic Haircut">Classic Haircut — ৳250</option>
+                                <option value="Premium Haircut">Premium Haircut — ৳400</option>
+                                <option value="Beard Trim">Beard Trim — ৳150</option>
+                                <option value="Haircut + Beard Combo">Haircut + Beard Combo — ৳450</option>
+                                <option value="Hair Wash">Hair Wash & Massage — ৳150</option>
+                                <option value="Facial Treatment">Facial Treatment — ৳500</option>
+                                <option value="Hair Color">Hair Color — ৳800</option>
+                                <option value="VIP Grooming">VIP Grooming Package — ৳900</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Preferred Stylist</label>
+                            <select id="cust-stylist" class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                                <option value="Any Available Stylist">Any Available Stylist</option>
+                                <option value="Master Stylist Rahul">Master Stylist Rahul</option>
+                                <option value="Fade Specialist Karim">Fade Specialist Karim</option>
+                                <option value="Beard Artist Alex">Beard Artist Alex</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Appointment Date *</label>
+                            <input type="date" id="cust-date" required class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Preferred Time *</label>
+                            <select id="cust-time" required class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                                <option value="" disabled selected>Select time slot</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:30 AM">11:30 AM</option>
+                                <option value="01:00 PM">01:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:30 PM">04:30 PM</option>
+                                <option value="06:00 PM">06:00 PM</option>
+                                <option value="07:30 PM">07:30 PM</option>
+                                <option value="09:00 PM">09:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Special Request / Notes</label>
+                        <textarea id="cust-message" rows="3" placeholder="Any specific requirements or preferences..." class="w-full bg-dark-900 border border-dark-600 rounded px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm"></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <button type="submit" id="submit-btn" class="flex-1 py-4 bg-amber-500 text-black font-bold text-sm uppercase tracking-wider rounded hover:bg-amber-400 transition shadow-lg shadow-amber-500/20 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Confirm Booking Demo</span>
+                        </button>
+                        <button type="button" onclick="bookViaWhatsApp()" class="py-4 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm uppercase tracking-wider rounded transition flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Book via WhatsApp</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="booking-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-dark-800 border border-amber-500 rounded-xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative animate-fade-in">
+            <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4 border border-amber-500/40">
+                <i class="fa-solid fa-check text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-white text-center mb-2">Booking Demo Confirmed!</h3>
+            <p class="text-xs text-amber-500 text-center uppercase tracking-widest mb-6">Demo Mode — No Database Connected</p>
+            
+            <div id="modal-summary" class="bg-dark-900 rounded p-4 text-xs space-y-2 border border-dark-700 text-gray-300 mb-6 font-mono">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <button onclick="closeBookingModal()" class="w-full py-3 bg-amber-500 text-black font-bold text-xs uppercase tracking-wider rounded hover:bg-amber-400 transition">
+                Done & Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 bg-dark-800 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex items-center justify-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+                    <span class="w-8 h-px bg-amber-400"></span>
+                    <span>Client Testimonials</span>
+                    <span class="w-8 h-px bg-amber-400"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">WHAT OUR CLIENTS SAY</h2>
+                <p class="text-gray-400 font-light">Real feedback from gentlemen who trust Royal Cuts with their look.</p>
+            </div>
+
+            <!-- Testimonial Slider Container -->
+            <div class="relative bg-dark-900 border border-dark-700 rounded-2xl p-8 sm:p-12">
+                <div id="testimonial-container" class="min-h-[160px] flex items-center justify-center">
+                    <!-- Dynamic review populated by JS -->
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex justify-between items-center mt-8 pt-6 border-t border-dark-700">
+                    <div class="flex space-x-2" id="testimonial-dots">
+                        <!-- Dots populated by JS -->
+                    </div>
+                    <div class="flex space-x-3">
+                        <button onclick="prevTestimonial()" class="w-10 h-10 rounded-full border border-dark-600 hover:border-amber-400 text-gray-300 hover:text-amber-400 flex items-center justify-center transition">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button onclick="nextTestimonial()" class="w-10 h-10 rounded-full border border-dark-600 hover:border-amber-400 text-gray-300 hover:text-amber-400 flex items-center justify-center transition">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                <div>
+                    <div class="flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-px bg-amber-400"></span>
+                        <span>Find & Contact Us</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-6">VISIT OUR STUDIO</h2>
+                    <p class="text-gray-400 font-light mb-8">Walk-ins are welcome, but appointments are highly recommended for zero waiting time.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-dark-800 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Salon Address</h4>
+                                <p class="text-gray-400 text-sm mt-1">GEC Circle, Nasirabad, Chattogram, Bangladesh</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-dark-800 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Phone Number</h4>
+                                <p class="text-gray-400 text-sm mt-1">+880 1800-000000 / +880 1700-000000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-dark-800 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Email Address</h4>
+                                <p class="text-gray-400 text-sm mt-1">info@royalcuts.com.bd</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-dark-800 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Opening Hours</h4>
+                                <p class="text-gray-400 text-sm mt-1">Sat – Thu: 10:00 AM – 10:00 PM</p>
+                                <p class="text-gray-400 text-sm">Friday: 03:00 PM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="mt-10 flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 border border-dark-700 hover:border-amber-400 text-gray-300 hover:text-amber-400 flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 border border-dark-700 hover:border-amber-400 text-gray-300 hover:text-amber-400 flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/8801800000000" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 border border-dark-700 hover:border-amber-400 text-gray-300 hover:text-amber-400 flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Placeholder -->
+                <div class="rounded-xl overflow-hidden border border-dark-700 shadow-xl min-h-[350px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.8583827170887!2d91.8213603!3d22.3592671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd89aaa123456%3A0x123456789abcdef!2sGEC%20Circle%2C%20Chittagong!5e0!3m2!1sen!2sbd!4v1680000000000!5m2!1sen!2sbd" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-dark-700 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-1">
+                    <a href="#home" class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 rounded-full border border-amber-500/50 flex items-center justify-center bg-dark-800 text-amber-400">
+                            <i class="fa-solid fa-scissors transform -rotate-45 text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold tracking-widest text-white uppercase font-serif">Royal Cuts</span>
+                    </a>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed">
+                        Chittagong's premier barbershop and men's grooming salon. Modern cuts, traditional precision, and ultimate style.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#home" class="hover:text-amber-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition">Services Menu</a></li>
+                        <li><a href="#work" class="hover:text-amber-400 transition">Gallery</a></li>
+                        <li><a href="#pricing" class="hover:text-amber-400 transition">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Services</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#services" class="hover:text-amber-400 transition">Haircuts & Styling</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition">Beard Sculpting</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition">Organic Hair Wash</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition">Gold Facial Spa</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition">VIP Packages</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Opening Hours</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li>Sat – Thu: 10:00 AM – 10:00 PM</li>
+                        <li>Friday: 03:00 PM – 10:00 PM</li>
+                        <li class="pt-2 text-amber-400 font-semibold"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp: +880 1800-000000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-dark-800 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; <span id="current-year"></span> ROYAL CUTS Salon & Grooming Studio. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for Premium Grooming Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-amber-500 text-black shadow-xl hidden flex items-center justify-center hover:bg-amber-400 transition z-40 transform hover:scale-110">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
+    <script src="../js/app.js"></script>
+</body>
+</html>
